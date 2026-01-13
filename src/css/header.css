@@ -1,0 +1,37 @@
+.header {
+    height: 64px;
+    background-color: #ef5350;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo-letter {
+    color: #ffeb3b;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.cart-summary {
+    display: flex;
+    gap: 16px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.cart-item svg {
+    color: #ffeb3b;
+}
