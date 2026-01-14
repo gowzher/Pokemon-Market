@@ -1,0 +1,70 @@
+.pokemon-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pokemon-name {
+    margin: 0;
+    font-size: 18px;
+}
+
+.pokemon-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.pokemon-type {
+    align-self: flex-start;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* örnek type renkleri */
+.fire {
+    background-color: #ff7043;
+    color: white;
+}
+
+.water {
+    background-color: #42a5f5;
+    color: white;
+}
+
+.grass {
+    background-color: #66bb6a;
+    color: white;
+}
+
+.electric {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+.psychic {
+    background-color: #ab47bc;
+    color: white;
+}
+
+.pokemon-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.buy-button {
+    border: none;
+    background-color: #ef5350;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
