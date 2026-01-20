@@ -27,7 +27,6 @@
     font-weight: 600;
 }
 
-/* örnek type renkleri */
 .fire {
     background-color: #ff7043;
     color: white;
@@ -48,8 +47,8 @@
     color: #333;
 }
 
-.psychic {
-    background-color: #ab47bc;
+.normal {
+    background-color: #A8A77A;
     color: white;
 }
 
@@ -67,4 +66,12 @@
     padding: 6px 12px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.pokemon-image {
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover .pokemon-image {
+    transform: scale(1.05);
 }

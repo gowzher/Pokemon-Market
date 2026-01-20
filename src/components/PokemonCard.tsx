@@ -13,6 +13,8 @@ function PokemonCard({ pokemon, onBuy }: PokemonCardProps) {
         <div className="pokemon-card">
             <h3 className="pokemon-name">{pokemon.name}</h3>
 
+            <img className="pokemon-image" src={pokemon.image} alt={pokemon.name} />
+
             <p className="pokemon-description">
                 {pokemon.description}
             </p>

@@ -5,10 +5,13 @@ import Header from "./components/Header";
 import PokemonList from "./components/PokemonList";
 import { pokemons } from "./data/Pokemons";
 import type { Pokemon } from "./types/Pokemon";
+import FilterBar from "./components/FilterBar";
+import type { PokemonType } from "./types/Pokemon";
 
 
 function App() {
   const [cart, setCart] = useState<Record<number, number>>({});
+  const [activeType, setActiveType] = useState<PokemonType>("All");
 
   const handleBuy = (pokemon: Pokemon) => {
     setCart(prev => ({
@@ -16,6 +19,7 @@ function App() {
       [pokemon.id]: (prev[pokemon.id] || 0) + 1,
     }));
   };
+
   const totalCount = Object.values(cart).reduce(
     (sum, count) => sum + count,
     0
@@ -29,12 +33,16 @@ function App() {
     0
   );
 
+  const filteredPokemons = activeType === "All"
+    ? pokemons
+    : pokemons.filter(pokemon => pokemon.type === activeType);
+
   return (
     <>
       <Header totalCount={totalCount} totalPrice={totalPrice} />
-
+      <FilterBar activeType={activeType} setActiveType={setActiveType} />
       <PokemonList
-        pokemons={pokemons}
+        pokemons={filteredPokemons}
         onBuy={handleBuy}
       />
     </>

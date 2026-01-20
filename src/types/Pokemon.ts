@@ -1,10 +1,11 @@
 // src/types/Pokemon.ts
 export type PokemonType =
+    | "All"
     | "Fire"
     | "Water"
     | "Grass"
     | "Electric"
-    | "Psychic";
+    | "Normal";
 
 export interface Pokemon {
     id: number;
@@ -12,4 +13,6 @@ export interface Pokemon {
     description: string;
     type: PokemonType;
     price: number;
+    image: string;
 }
+

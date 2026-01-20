@@ -7,3 +7,57 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  /* Butonları ortalar */
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  /* Mobilde alt satıra geçmesini sağlar */
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  /* Hap şekli */
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Üzerine gelince veya aktifken efekt */
+.filter-btn:hover,
+.filter-btn.active {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Seçili butonu belirginleştirme */
+.filter-btn.active {
+  border-color: #ef5350;
+  /* Header rengine yakın bir kırmızı */
+  color: #ef5350;
+}
+
+/* Tip renklerini butonlara yansıtmak istersen: */
+.filter-btn.fire.active {
+  background-color: #EE8130;
+  color: white;
+  border-color: #EE8130;
+}
+
+.filter-btn.water.active {
+  background-color: #6390F0;
+  color: white;
+  border-color: #6390F0;
+}
+
+.filter-btn.normal.active {
+  background-color: #A8A77A;
+  color: white;
+  border-color: #A8A77A;
+}
