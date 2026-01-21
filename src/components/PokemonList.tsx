@@ -1,20 +1,22 @@
-// src/components/PokemonList.tsx
 import PokemonCard from "./PokemonCard";
-import type { Pokemon } from "../types/Pokemon";
+import { filteredPokemons } from "../redux/activeSlice";
+import type { RootState } from "../redux/store";
+import { useSelector } from "react-redux";
 
-interface PokemonListProps {
-    pokemons: Pokemon[];
-    onBuy: (pokemon: Pokemon) => void;
-}
 
-function PokemonList({ pokemons, onBuy }: PokemonListProps) {
+
+
+
+function PokemonList() {
+    const activeType = useSelector((state: RootState) => state.active.activeType);
+    const pokemons = filteredPokemons(activeType);
+
     return (
         <div className="pokemon-list">
             {pokemons.map(pokemon => (
                 <PokemonCard
                     key={pokemon.id}
                     pokemon={pokemon}
-                    onBuy={onBuy}
                 />
             ))}
         </div>

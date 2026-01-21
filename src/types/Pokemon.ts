@@ -1,4 +1,3 @@
-// src/types/Pokemon.ts
 export type PokemonType =
     | "All"
     | "Fire"

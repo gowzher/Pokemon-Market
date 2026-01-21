@@ -1,13 +1,16 @@
 import { TbPokeball } from "react-icons/tb";
 import "../css/header.css"
 import { FaShoppingBasket } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { selectTotalCount, selectTotalPrice } from "../redux/cartSlice";
+import { pokemons } from "../data/Pokemons";
+import type { RootState } from "../redux/store";
 
-interface HeaderProps {
-    totalCount: number;
-    totalPrice: number;
-}
+function Header() {
+    const cartState = useSelector((state: RootState) => state.cart);
+    const totalCount = selectTotalCount({ cart: cartState });
+    const totalPrice = selectTotalPrice({ cart: cartState }, pokemons);
 
-function Header({ totalCount, totalPrice }: HeaderProps) {
     return (
         <header className="header">
             <h1 className="title">

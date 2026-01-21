@@ -1,4 +1,3 @@
-// src/data/pokemons.ts
 import type { Pokemon } from "../types/Pokemon";
 import pikachu from "../images/pikachu.png"
 import charmander from "../images/charmander.png"

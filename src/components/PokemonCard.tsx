@@ -1,14 +1,19 @@
-// src/components/PokemonCard.tsx
 import type { Pokemon } from "../types/Pokemon";
 import "../css/pokemonCard.css"
 import { TbPokeball } from "react-icons/tb";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
+
 
 interface PokemonCardProps {
     pokemon: Pokemon;
-    onBuy: (pokemon: Pokemon) => void;
 }
 
-function PokemonCard({ pokemon, onBuy }: PokemonCardProps) {
+function PokemonCard({ pokemon }: PokemonCardProps) {
+
+
+    const dispatch = useDispatch();
+
     return (
         <div className="pokemon-card">
             <h3 className="pokemon-name">{pokemon.name}</h3>
@@ -30,7 +35,7 @@ function PokemonCard({ pokemon, onBuy }: PokemonCardProps) {
 
                 <button
                     className="buy-button"
-                    onClick={() => onBuy(pokemon)}
+                    onClick={() => dispatch(addToCart(pokemon))}
                 >
                     Satın Al
                 </button>

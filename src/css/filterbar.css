@@ -1,0 +1,83 @@
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn.active {
+    border-color: #ef5350;
+    color: #ef5350;
+}
+
+.filter-btn.fire.active {
+    background-color: #EE8130;
+    color: white;
+    border-color: #EE8130;
+}
+
+.filter-btn.water.active {
+    background-color: #6390F0;
+    color: white;
+    border-color: #6390F0;
+}
+
+.filter-btn.normal.active {
+    background-color: #A8A77A;
+    color: white;
+    border-color: #A8A77A;
+}
+
+.filter-btn.grass.active {
+    background-color: #7AC74C;
+    color: white;
+    border-color: #7AC74C;
+}
+
+.filter-btn.electric.active {
+    background-color: #F7D02C;
+    color: black;
+    border-color: #F7D02C;
+}
+
+.fire {
+    background-color: #ff7043;
+    color: white;
+}
+
+.water {
+    background-color: #42a5f5;
+    color: white;
+}
+
+.grass {
+    background-color: #66bb6a;
+    color: white;
+}
+
+.electric {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+.normal {
+    background-color: #A8A77A;
+    color: white;
+}
